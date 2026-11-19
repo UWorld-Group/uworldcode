@@ -5,12 +5,12 @@
 **Say it. It gets built. — A self-hosted AI coding agent that runs on your own PC.**
 **말하면, 만들어집니다. — 내 PC에서 돌아가는 자체 호스팅 AI 코딩 에이전트.**
 
-[![Latest release](https://img.shields.io/github/v/release/UWorld-Group/uworldcode?label=Windows%20%7C%20macOS&logo=github&color=7c5cff)](https://github.com/UWorld-Group/uworldcode/releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/UWorld-Group/uworldcode?label=Windows%20%7C%20macOS%20%7C%20Linux&logo=github&color=7c5cff)](https://github.com/UWorld-Group/uworldcode/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/UWorld-Group/uworldcode/total?label=downloads&color=2ea043)](https://github.com/UWorld-Group/uworldcode/releases)
 
-| Windows | macOS |
-|:---:|:---:|
-| [**Download**](https://github.com/UWorld-Group/uworldcode/releases/latest) | [**DMG (Apple silicon)**](https://github.com/UWorld-Group/uworldcode/releases/latest) |
+| Windows | macOS | Linux |
+|:---:|:---:|:---:|
+| [**Download**](https://github.com/UWorld-Group/uworldcode/releases/latest) | [**DMG (Apple silicon)**](https://github.com/UWorld-Group/uworldcode/releases/latest) | [**.deb (Ubuntu · Debian)**](https://github.com/UWorld-Group/uworldcode/releases/latest) |
 
 </div>
 
@@ -99,6 +99,22 @@ Everything runs on **your own machine**. The AI models, the database and your pr
 3. Open it from Applications and follow the first-run setup.
    응용 프로그램에서 실행해 처음 설정을 진행합니다.
 4. *(Optional)* Verify: `shasum -a 256 UWorldCode-<version>-macos-arm64.dmg`
+
+### Linux (.deb)
+
+**Requirements · 사양**: Ubuntu 22.04 or later / Debian 12 or later (64-bit). PostgreSQL is installed automatically.
+권장 사양: Ubuntu 22.04 이상 / Debian 12 이상(64비트). PostgreSQL 은 함께 설치됩니다.
+
+1. Download **`UWorldCode-<version>-linux-amd64.deb`** from the [latest release](https://github.com/UWorld-Group/uworldcode/releases/latest) and install it:
+   최신 릴리스에서 .deb 를 내려받아 설치합니다.
+   ```bash
+   sudo apt install ./UWorldCode-<version>-linux-amd64.deb
+   ```
+2. Open **http://localhost:7320** in a browser and create the administrator account.
+   브라우저에서 **http://localhost:7320** 을 열고 관리자 계정을 만듭니다.
+3. It runs as the `uworldcode` service (`sudo systemctl status uworldcode`); settings are in `/opt/uworldcode/.env`.
+   `uworldcode` 서비스로 실행되며, 설정은 `/opt/uworldcode/.env` 에 있습니다.
+4. *(Optional)* Verify: `sha256sum UWorldCode-<version>-linux-amd64.deb`
 
 ---
 
